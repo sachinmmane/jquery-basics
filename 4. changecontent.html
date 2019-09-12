@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>selecthtmlelement</title>
+      <style>
+          .bluebox{
+                background-color: #435F9C;
+                color: white;
+                height: 100px;
+                width:auto;
+          }
+          .yellowbox{
+                background-color: #f4f44b;
+                height: 100px;
+                width:auto;
+               
+          }
+          .greenbox{
+                background-color: #1b8f0f;
+                height: auto;
+                width:auto;
+          }
+          .great{
+                background-color:brown;
+          }
+		</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+    </head>
+    
+        <body>
+            <div class="bluebox" id="facebook">
+                <p>Facebook is <span class="great">great</span></p>
+            </div>
+              <div class="yellowbox" id="apple">
+                <p>Apple</p>
+			</div>	  
+			<div class="greenbox" id="microsoft">
+                <p id="microsoftParagraph">Microsoft</p>
+				<p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link.</a></p>
+            </div>
+			<p>Enter Your Name<input></p>
+			<button id="changeFacebook">Change Facebook text.</button>
+			<button id="changeApple">Change Apple html.</button>
+			<button id="changeInput">Change Input Value.</button>
+			<button id="changeMicrosoft">Change Microsoft.</button>
+			<button id="addText">Add Text.</button>
+			
+			
+			
+        </body>
+    	<script>
+			$(function(){
+				$("#changeFacebook").click( function(){
+					$("#facebook").text("This is Facebook.");
+					});
+				$("#changeApple").click( function(){
+				$("#apple").html("<p> This is Apple</p><p>New IOS available.</p>");
+					});
+				$("#changeInput").click( function(){
+					$("input").val("Sachin");
+					});
+				$("#changeMicrosoft").click(function(){
+					$("#microsoftLink").attr({"href" : "http://www.google.com", "title" : "google"});
+				});
+			/*	$("#addText").click(function(){
+					$("#microsoft").append("<ul><li>BMW</li><li>AUDI</li><li>JAGUAR</li></ul>");	
+					});*/
+//				$("#addText").click(function(){
+//					$("#microsoft").prepend("<ul><li>BMW</li><li>AUDI</li><li>JAGUAR</li></ul>");	
+//					});
+				
+				$("#addText").click(function(){
+					$("#microsoftParagraph").after("<p>New ");	
+					});
+			`						`
+			});
+			
+			
+			</script>
+    
+</html> 
