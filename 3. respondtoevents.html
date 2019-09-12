@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>respond to event</title>
+	<style>
+		.bluebox {
+			background-color: #435F9C;
+			color: white;
+			height: auto;
+			width: auto;
+		}
+
+		.yellowbox {
+			background-color: #f4f44b;
+			height: auto;
+			width: auto;
+
+		}
+
+		.greenbox {
+			background-color: #1b8f0f;
+			height: auto;
+			width: auto;
+		}
+
+		.great {
+			background-color: brown;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div class="bluebox">
+		<p>Facebook is <span id="great">great</span></p>
+		<p class="orange">Paragraph 2</p>
+		<p>paragraph3</p>
+	</div>
+	<div class="yellowbox">
+		<p>Apple</p>
+		<ul>
+			<li>BMW</li>
+			<li>AUDI</li>
+			<li>MERCEDES</li>
+		</ul>
+		<p><a href="http://www.google.com">This is a link</a></p>
+		<p><a href="http://www.microsoft.com">This is another link</a></p>
+	</div>
+	<p>a paragraph</p>
+	<div class="greenbox">
+		<p>Microsoft</p>
+		<ul>
+			<li>BMW</li>
+			<li>AUDI</li>
+			<li>MERCEDES</li>
+		</ul>
+		<table>
+			<tr>
+				<th>Phone Make</th>
+				<th>Model</th>
+				<th>Storage</th>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>Iphone 5</td>
+				<td>16 Gb</td>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>Iphone 5</td>
+				<td>16 Gb</td>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>Iphone 5</td>
+				<td>16 Gb</td>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>Iphone 5</td>
+				<td>16 Gb</td>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td>Iphone 5</td>
+				<td>16 Gb</td>
+			</tr>
+		</table>
+
+	</div>
+	<p>Type your name:<input><button type="submit">Submit</button></p>
+	<script>
+		$(function() {
+			////					$("p").click(function(){
+			//						/*$("p").css ("background-color", "rgba(206, 152, 230, 0.697)");*/			 
+			//						/*$(this).css ("background-color", "rgba(206, 152, 230, 0.697)");*/
+
+			$("p").mouseover(function() {
+				$(this).css("background-color", "rgba(189, 132, 214, 0.697)");
+				$("p").mouseout(function() {
+					$(this).css("background-color", "");
+				});
+				$("input").focus(function() {
+					$(this).css("background-color", "rgba(210, 195, 131, 0.697)");
+				});
+				$("input").blur(function() {
+					$(this).css("background-color", "#ffffff");
+				});
+				$("input").keyup(function() {
+					$(this).css("background-color", "rgba(39, 190, 162,  0.697)");
+				});
+			});
+
+		});
+	</script>
+</body>
+
+</html>
