@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Change html Styling</title>
+	<style>
+		.bluebox {
+			background-color: #435F9C;
+			color: white;
+			height: 100px;
+			width: 300px;
+		}
+
+		.yellowbox {
+			background-color: #f4f44b;
+			height: 100px;
+			width: auto;
+
+		}
+
+		.greenbox {
+			background-color: #1b8f0f;
+			height: 100px;
+			width: auto;
+		}
+
+		.great {
+			background-color: brown;
+		}
+		
+		.sans-serif{
+			font-family: sans-serif;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<button id="changeFacebook">Change Facebook.</button>
+	<button id="changeApple">Change Apple</button>
+	<button id="changeMicrosoft">Change Microsoft</button>
+	<button id="showMircosoft">Show Microshoft</button>
+	
+	<div class="bluebox" id="facebook">
+		<p>Facebook is <span class="great">great</span></p>
+	</div>
+	<div class="yellowbox sans-serif" id="apple">
+		<p>Apple</p>
+	</div>
+	<div class="greenbox" id="microsoft">
+		<p id="microsoftParagraph">Microsoft</p>
+		<p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link.</a></p>
+	</div>
+	<p>Enter Your Name<input></p>
+
+</body>
+<script>
+	$(function() {
+		$("#changeFacebook").click(function(){
+		$("#facebook").css("width", 100*Math.random()-50 + $("#facebook").width());
+		$("#facebook").addClass("greenbox");
+//		window.alert($("#facebook").innerHeight
+//());		
+//		window.alert($("#facebook").outerHeight
+//());	
+		});
+	
+		$("#apple").click(function(){
+			$("#apple").removeClass("sans-serif"); 	
+			$("#apple").css ("position","absolute");
+			$("#apple").css ({'top' : 200*Math.random(), 'left' : Math.floor(200*Math.random()), 'background-color': 'rgb(' + Math.floor(200*Math.random()) + ',' + Math.floor(200*Math.random()) + ',' + Math.floor(200*Math.random()) + ')'});
+		});
+		
+		$("#changeMicrosoft").click(function(){
+			$("#microsoft").toggleClass("greenbox");
+			});
+		
+			$("#microsoft").dblclick(function(){
+				$(this).hide();	
+			});
+			$("#showMircosoft").click(function() {
+				$("#microsoft").show();	
+			});
+	});
+
+</script>
+
+</html>
