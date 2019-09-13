@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title> jQueryeffects</title>
+	<title> Selectable </title>
 	<style>
 		.bluebox {
 			background-color: #435F9C;
@@ -29,22 +29,24 @@
 		.great {
 			background-color: brown;
 		}
+
 		li {
 			font-size: 2em;
 			margin-bottom: 5px;
 			text-align: center;
 		}
+
 		#list .ui-selecting {
 			background: #740da0;
 		}
+
 		#list .ui-selected {
 			background: #953ebb;
 			color: white;
 		}
-		
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	
+
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
@@ -52,14 +54,14 @@
 </head>
 
 <body>
-	<div class="bluebox ui-corner-all"  id="facebook">
+	<div class="bluebox ui-corner-all" id="facebook">
 		<p>Facebook is <span class="great">great</span></p>
 	</div>
 	<div class="yellowbox ui-corner-all" id="apple">
 		<ul id="list">
-		<li class="ui-state-default">AUDI</li>
-		<li class="ui-state-default">BMW</li>
-		<li class="ui-state-default">JAGUAR</li>
+			<li class="ui-state-default">AUDI</li>
+			<li class="ui-state-default">BMW</li>
+			<li class="ui-state-default">JAGUAR</li>
 		</ul>
 	</div>
 	<div class="greenbox ui-corner-all" id="microsoft">
@@ -69,14 +71,15 @@
 
 </body>
 <script>
-	$(function(){
+	$(function() {
 		$("#list").selectable({
-			stop: function(){
-				$(".ui-selected").each(function(){
+			stop: function() {
+				$(".ui-selected").each(function() {
 					$('<p></p>').text($(this).text()).appendTo("#microsoft");
 				});
 			}
-		});	`						`
+		});
+		`						`
 	});
 </script>
 
